@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experiencia: Islas Canarias - La Palma</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo">
+    <img src="Imagenes/LOGO.png" alt="Logo Ecos de aventura" />
+  </div>
+  <nav>
+    <ul>
+      <li><a href="Index.html">Inicio</a></li>
+      <li><a href="experiencias.html" class="active">Experiencias</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Detalles de la experiencia -->
+<section class="section container">
+  <div class="image-side">
+    <img src="Imagenes/lapalma.jpg" alt="Viaje a La Palma, Islas Canarias" />
+    <p>
+      La Palma, también llamada "la isla bonita", es un paraíso para los amantes de la naturaleza. Aquí el mar y la montaña conviven en armonía, ofreciendo experiencias únicas entre volcanes, bosques milenarios y fauna marina extraordinaria.
+    </p>
+
+    <h2>Aventura en La Palma: naturaleza, océano y estrellas</h2>
+    <p>
+      Explora lo mejor de esta joya canaria: sumérgete en sus aguas cristalinas, contempla cetáceos en libertad y contempla los cielos más limpios de Europa. La Palma te espera con experiencias que conectan contigo y con el planeta.
+    </p>
+    <h3>Un poco de historia</h3>
+    <p>
+      La isla fue hogar de los <strong>benahoaritas</strong>, un pueblo indígena que vivió en armonía con el entorno volcánico. Tras la conquista en el siglo XV, La Palma se convirtió en una mezcla de cultura aborigen, española y africana. Hoy es Reserva de la Biosfera y referente de turismo sostenible.
+    </p>
+  </div>
+
+  <div class="text-side">
+
+    
+
+    <h3>Itinerario del viaje</h3>
+    <ul class="travel-list">
+      <li><strong>Día 1 - Llegada a Santa Cruz:</strong> Bienvenida en el aeropuerto, traslado al alojamiento con encanto. Tiempo libre por el casco histórico.</li>
+      <li><strong>Día 2 - Buceo en aguas atlánticas:</strong> Curso de iniciación o inmersión guiada en zonas protegidas del suroeste. Tarde libre en Puerto Naos.</li>
+      <li><strong>Día 3 - Volcanes y senderismo:</strong> Ruta por la Cumbre Vieja hasta el volcán Tajogaite, reciente paisaje modelado por la lava. Picnic en ruta.</li>
+      <li><strong>Día 4 - Avistamiento de cetáceos:</strong> Navegación por la costa oeste para ver delfines, calderones y tortugas. Parada para snorkel en calas escondidas.</li>
+      <li><strong>Día 5 - Astronomía y tradiciones:</strong> Visita al Roque de los Muchachos y observación nocturna guiada. Cena local en restaurante de montaña.</li>
+      <li><strong>Día 6 - Fin del viaje:</strong> Desayuno, últimas compras y traslado al aeropuerto.</li>
+    </ul>
+
+    <h3>Qué incluye</h3>
+    <ul class="travel-list">
+      <li>Traslados y transporte en la isla</li>
+      <li>5 noches de alojamiento con encanto</li>
+      <li>Sesión de buceo o snorkel guiado</li>
+      <li>Excursión de avistamiento de cetáceos</li>
+      <li>Rutas guiadas por volcanes y bosques</li>
+      <li>Observación astronómica con guía</li>
+      <li>Desayunos y picnic en rutas</li>
+      <li>Seguro de viaje y actividades</li>
+    </ul>
+
+  </div>
+</section>
+
+<div class="experience_buttons">
+      <a href="experiencias.html" class="btn">Volver a experiencias</a>
+      <a href="#formulario-reserva" class="btn" id="mostrarFormulario">Reservar ahora</a>
+</div>
+<div id="formulario-reserva" class="formulario-reserva oculto">
+    <form action="#" method="post" class="contact-form">
+        <label for="name">Nombre completo:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Número de teléfono:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="destination">Destino de interés:</label>
+        <select id="destination" name="destination" required>
+            <option value="Sahara">Viaje al Desierto del Sahara</option>
+            <option value="Canarias">Buceo en la Isla de la Palma</option>
+            <option value="Georgia">Esquí en Georgia</option>
+            <option value="Castejon">Curso de Parapente en Castejón de Sos</option>
+            <option value="Hawaii">Surf en Hawái</option>
+            <option value="otro">Otro viaje</option>
+        </select>
+
+        <label for="dates">Fechas preferidas para el viaje:</label>
+        <input type="text" id="dates" name="dates" placeholder="Ej. Julio 2025" required>
+
+        <label for="message">Comentarios adicionales:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit" class="btn">Enviar datos de contacto</button>
+    </form>
+</div>
+
+</div>
+
+
+<!-- Footer -->
+<footer id="contacto">
+
+    <div class="social-icons">
+        <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                <path d="M 31.820312 12 C 13.439312 12 12 13.439312 12 31.820312 L 12 32.179688 C 12 50.560688 13.439312 52 31.820312 52 L 32.179688 52 C 50.560688 52 52 50.560688 52 32.179688 L 52 32 C 52 13.452 50.548 12 32 12 L 31.820312 12 z M 28 16 L 36 16 C 47.129 16 48 16.871 48 28 L 48 36 C 48 47.129 47.129 48 36 48 L 28 48 C 16.871 48 16 47.129 16 36 L 16 28 C 16 16.871 16.871 16 28 16 z M 41.994141 20 C 40.889141 20.003 39.997 20.900859 40 22.005859 C 40.003 23.110859 40.900859 24.003 42.005859 24 C 43.110859 23.997 44.003 23.099141 44 21.994141 C 43.997 20.889141 43.099141 19.997 41.994141 20 z M 31.976562 22 C 26.454563 22.013 21.987 26.501437 22 32.023438 C 22.013 37.545437 26.501437 42.013 32.023438 42 C 37.545437 41.987 42.013 37.498562 42 31.976562 C 41.987 26.454563 37.498562 21.987 31.976562 22 z M 31.986328 26 C 35.299328 25.992 37.992 28.673328 38 31.986328 C 38.007 35.299328 35.326672 37.992 32.013672 38 C 28.700672 38.008 26.008 35.327672 26 32.013672 C 25.992 28.700672 28.673328 26.008 31.986328 26 z"/>
+            </svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                <path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h10v-9h-3v-3h3v-1.611C16,9.339,17.486,8,20.021,8 c1.214,0,1.856,0.09,2.16,0.131V11h-1.729C19.376,11,19,11.568,19,12.718V14h3.154l-0.428,3H19v9h5c1.105,0,2-0.895,2-2V6 C26,4.895,25.104,4,24,4z"/>
+            </svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                <path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"/>
+                <path fill="#FFF" d="M20 31L20 17 32 24z"/>
+            </svg>
+        </a>
+    </div>
+</footer>
+
+<script>
+  document.getElementById("mostrarFormulario").addEventListener("click", function (e) {
+    e.preventDefault(); // Evita el salto directo con #
+    document.getElementById("formulario-reserva").style.display = "block";
+    document.getElementById("formulario-reserva").scrollIntoView({ behavior: "smooth" });
+  });
+</script>
+
+</body>
+</html>

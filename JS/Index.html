@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOS DE AVENTURA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="Imagenes/LOGO.png" alt="Logo Ecos de aventura">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <!-- banner inicio con imagenes fijas -->
+
+     <div class="banner-container">
+        <div class="banner-images">
+            <img src="Imagenes/imagen1.jpg" alt="Imagen 1">
+            <img src="Imagenes/imagen2.jpg" alt="Imagen 2">
+            <img src="Imagenes/imagen3.jpg" alt="Imagen 3">
+        </div>
+    </div>
+   
+
+    <!-- Sección de Experiencias con Carrusel -->
+        <div class="titulo">
+            <h2>EXPERIENCIAS</h2>
+        </div>
+    
+    <div class="carousel-experiencias">
+        
+        <button class="prev">&#10094;</button>
+        <div class="carousel-track">
+            <div class="carousel-item">
+                <img src="imagenes/experiencia1.jpg" alt="Experiencia 1">
+                <h3><a href="experiencia1.html">SAHARA</a></h3>
+                <p>Una experiencia única en el desierto, viviendo en contacto directo con la naturaleza.</p>
+                <div class="experience_buttons">
+                <a href="experiencia1.html" class="btn">Ver experiencia completa</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagenes/experiencia2.jpg" alt="Experiencia 2">
+                <h3><a href="experiencia2.html">CANARIAS</a></h3>
+                <p>Una aventura increíble para los amantes del mar</p>
+                <div class="experience_buttons">
+                <a href="experiencia2.html" class="btn">Ver experiencia completa</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagenes/experiencia3.jpg" alt="Experiencia 3">
+                <h3><a href="experiencia3.html">GEORGIA</a></h3>
+                <p>Descubre un paraíso desconocido para el esquí y la montaña</p>
+                <div class="experience_buttons">
+                <a href="experiencia3.html" class="btn">Ver experiencia completa</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagenes/experiencia4.jpg" alt="Experiencia 4">
+                <h3><a href="experiencia4.html">CASTEJON DE SOS</a></h3>
+                <p>Sobrevuela los Pirineos y siente la libertad absoluta</p>
+                <div class="experience_buttons">
+                <a href="experiencia4.html" class="btn">Ver experiencia completa</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagenes/experiencia5.jpg" alt="Experiencia 5">
+               <h3><a href="experiencia5.html">HAWAI</a></h3>
+                <p>Algo más que un viaje, es un ritual: surfea en las aguas sagradas de Hawái</p>
+                <div class="experience_buttons">
+                <a href="experiencia5.html" class="btn">Ver experiencia completa</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagenes/experiencia6.jpg" alt="Experiencia 6">
+                <h3><a href="experiencia6.html">COSTA RICA</a></h3>
+                <p>Explora múltiples países desde el mar, con todo incluido.</p>
+                <div class="experience_buttons">
+                <a href="experiencia6.html" class="btn">Ver experiencia completa</a>
+                </div>
+            </div>
+        </div>
+        <button class="next">&#10095;</button>
+    </div>
+    
+</section>
+
+
+<script>
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    let currentIndex = 0;
+
+    function getItemsPerSlide() {
+        if (window.innerWidth <= 600) return 1;
+        if (window.innerWidth <= 1024) return 2;
+        return 3;
+    }
+
+   function updateCarousel() {
+    const itemsPerSlide = getItemsPerSlide();
+    const itemStyle = items[0].getBoundingClientRect(); // <-- esto es clave
+    const itemWidth = itemStyle.width + 40; // 20px es el gap entre ítems
+
+    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+}
+
+
+    nextButton.addEventListener('click', () => {
+        const itemsPerSlide = getItemsPerSlide();
+        if (currentIndex < items.length - itemsPerSlide) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        updateCarousel();
+    });
+
+    window.addEventListener('load', () => {
+        updateCarousel();
+    });
+</script>
+
+
+</section>
+
+
+    <!-- Sección de Destinos Populares ESTARIA BIEN AÑADIR ESTO, PERO NO CREO QUE TENGA TIEMPO, QUEDA MUY SOSA LA PAGINA SIN ESTO
+     
+    <section class="section" id="destinos">
+        <h2>Destinos Populares</h2>
+        <div class="destination">
+            <img src="imagenes/destino1.jpg" alt="Destino 1">
+            <h3>Paris, Francia</h3>
+            <p>La ciudad del amor, famosa por su historia, arte y gastronomía.</p>
+        </div>
+        <div class="destination">
+            <img src="imagenes/destino2.jpg" alt="Destino 2">
+            <h3>Bali, Indonesia</h3>
+            <p>Un paraíso tropical, ideal para relajarse y explorar templos antiguos.</p>
+        </div>
+    </section>
+
+     Blog 
+    <section class="section" id="blog">
+        <h2>Blog de Viajes</h2>
+        <div class="blog-post">
+            <h3>Cómo planificar tu primer viaje a Europa</h3>
+            <p>Guía completa para recorrer Europa de forma económica y disfrutar al máximo.</p>
+            <a href="#">Leer más</a>
+        </div>
+        <div class="blog-post">
+            <h3>Las mejores actividades para hacer en Japón</h3>
+            <p>Consejos sobre los mejores lugares para visitar y qué hacer en Japón.</p>
+            <a href="#">Leer más</a>
+        </div>
+    </section>
+
+ELIMINAR SI NO DA TIEMPO A COMPLETARLO TODO-->
+
+    <!-- Footer -->
+   <footer id="contacto">
+
+    <div class="social-icons">
+        <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                <path d="M 31.820312 12 C 13.439312 12 12 13.439312 12 31.820312 L 12 32.179688 C 12 50.560688 13.439312 52 31.820312 52 L 32.179688 52 C 50.560688 52 52 50.560688 52 32.179688 L 52 32 C 52 13.452 50.548 12 32 12 L 31.820312 12 z M 28 16 L 36 16 C 47.129 16 48 16.871 48 28 L 48 36 C 48 47.129 47.129 48 36 48 L 28 48 C 16.871 48 16 47.129 16 36 L 16 28 C 16 16.871 16.871 16 28 16 z M 41.994141 20 C 40.889141 20.003 39.997 20.900859 40 22.005859 C 40.003 23.110859 40.900859 24.003 42.005859 24 C 43.110859 23.997 44.003 23.099141 44 21.994141 C 43.997 20.889141 43.099141 19.997 41.994141 20 z M 31.976562 22 C 26.454563 22.013 21.987 26.501437 22 32.023438 C 22.013 37.545437 26.501437 42.013 32.023438 42 C 37.545437 41.987 42.013 37.498562 42 31.976562 C 41.987 26.454563 37.498562 21.987 31.976562 22 z M 31.986328 26 C 35.299328 25.992 37.992 28.673328 38 31.986328 C 38.007 35.299328 35.326672 37.992 32.013672 38 C 28.700672 38.008 26.008 35.327672 26 32.013672 C 25.992 28.700672 28.673328 26.008 31.986328 26 z"/>
+            </svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                <path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h10v-9h-3v-3h3v-1.611C16,9.339,17.486,8,20.021,8 c1.214,0,1.856,0.09,2.16,0.131V11h-1.729C19.376,11,19,11.568,19,12.718V14h3.154l-0.428,3H19v9h5c1.105,0,2-0.895,2-2V6 C26,4.895,25.104,4,24,4z"/>
+            </svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                <path fill="#FF3D00" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"/>
+                <path fill="#FFF" d="M20 31L20 17 32 24z"/>
+            </svg>
+        </a>
+    </div>
+</footer>
+</body>
+</html>
+
